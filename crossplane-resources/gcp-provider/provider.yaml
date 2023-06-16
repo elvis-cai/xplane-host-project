@@ -2,6 +2,8 @@ apiVersion: pkg.crossplane.io/v1
 kind: Provider
 metadata:
   name: provider-gcp
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
 spec:
   package: xpkg.upbound.io/upbound/provider-gcp:v0.32.0
   controllerConfigRef:
@@ -11,6 +13,8 @@ apiVersion: pkg.crossplane.io/v1alpha1
 kind: ControllerConfig
 metadata:
   name: custom-gcp-config
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"
 spec:
   serviceAccountName: crossplane
   args:

@@ -2,6 +2,8 @@ apiVersion: gcp.upbound.io/v1beta1
 kind: ProviderConfig
 metadata:
   name: default
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"
 spec:
   projectID: fx-nonprod-716f2723
   credentials:
