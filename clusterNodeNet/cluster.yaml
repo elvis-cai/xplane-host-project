@@ -1,0 +1,21 @@
+apiVersion: platform.awx.im/v1alpha1
+kind: ClusterNodeNet
+metadata:
+  name: hackathon-demo
+  namespace: default
+  labels:
+    purpose: hackathon
+    provider: gcp
+spec:
+  compositionRevisionSelector:
+    matchLabels:
+      channel: demo
+      purpose: hackathon
+      provider: gcp
+  id: awx-hack-uyq23
+  parameters:
+    cluster: hackathon-uyq23
+    network: hackathon-net-uyq23
+    subnetwork: hackathon-subnet-uyq23
+  writeConnectionSecretToRef:
+    name: hackaton-cluster-conn
