@@ -342,6 +342,7 @@ spec:
               kind: Application
               metadata:
                 name: crossplane-resources
+                namespace: argocd
               spec:
                 destination:
                   namespace: crossplane-system
