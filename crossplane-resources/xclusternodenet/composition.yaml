@@ -183,7 +183,7 @@ spec:
         spec:
           forProvider:
             autoscaling:
-            - locationPolicy: ANY
+            - locationPolicy: BALANCED
               maxNodeCount: 5
               minNodeCount: 2
             nodeConfig:
