@@ -17,4 +17,5 @@ helm install --repo https://argoproj.github.io/argo-helm --create-namespace --na
 kubectl -n argocd apply -f $MYDIR/../argocd-applications
 
 colored_echo "2. apply provider config"
+kubectl create ns crossplane-system
 kubectl create secret generic gcp-secret -n crossplane-system --from-file=creds=./gcp-credentials.json
