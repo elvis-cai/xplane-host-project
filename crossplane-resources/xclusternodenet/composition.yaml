@@ -320,12 +320,21 @@ spec:
                   chart: crossplane
                   helm:
                     releaseName: crossplane
+                    values: |
+                      args:
+                       - --debug
                   repoURL: https://charts.crossplane.io/stable
                   targetRevision: 1.12.2
                 syncPolicy:
                   automated:
                     selfHeal: true
                     prune: true
+                  retry:
+                    backoff:
+                      duration: 30s
+                      factor: 2
+                      maxDuration: 5m0s
+                    limit: 10
                   syncOptions:
                     - CreateNamespace=true
       patches:
@@ -359,6 +368,12 @@ spec:
                   automated:
                     selfHeal: true
                     prune: true
+                  retry:
+                    backoff:
+                      duration: 30s
+                      factor: 2
+                      maxDuration: 5m0s
+                    limit: 10
                   syncOptions:
                     - CreateNamespace=true
       patches:
@@ -392,6 +407,12 @@ spec:
                   automated:
                     selfHeal: true
                     prune: true
+                  retry:
+                    backoff:
+                      duration: 30s
+                      factor: 2
+                      maxDuration: 5m0s
+                    limit: 10
                   syncOptions:
                     - CreateNamespace=true
       patches:
