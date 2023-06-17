@@ -238,6 +238,8 @@ spec:
           - type: string
             string:
               fmt: "%s-sakey"
+      readinessChecks:
+        - type: None
     - name: helm-release
       base:
         apiVersion: helm.crossplane.io/v1beta1
@@ -299,6 +301,8 @@ spec:
           - type: string
             string:
               fmt: "%s-sakey"
+      readinessChecks:
+        - type: None
     - name: crossplane-controller
       base:
         apiVersion: kubernetes.crossplane.io/v1alpha1
