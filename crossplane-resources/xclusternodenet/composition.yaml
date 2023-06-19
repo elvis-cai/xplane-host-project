@@ -49,9 +49,6 @@ spec:
         apiVersion: cloudplatform.gcp.upbound.io/v1beta1
         kind: ServiceAccountKey
         spec:
-          forProvider:
-            serviceAccountIdSelector:
-              matchControllerRef: true
       patches:
       - type: FromCompositeFieldPath
         fromFieldPath: metadata.uid
