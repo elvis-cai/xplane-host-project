@@ -256,6 +256,8 @@ spec:
                 cm:
                   application.resourceTrackingMethod: annotation
               server:
+                service:
+                  type: LoadBalancer
                 extraArgs:
                   - --insecure
                   - --disable-auth
