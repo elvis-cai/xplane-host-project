@@ -62,7 +62,7 @@ spec:
         toFieldPath: spec.writeConnectionSecretToRef.namespace
       - type: FromCompositeFieldPath
         fromFieldPath: spec.id
-        toFieldPath: spec.forProvider.serviceAccountIdSelector[id]
+        toFieldPath: spec.forProvider.serviceAccountIdSelector.matchLabels[id]
       
     - name: project-iam-member
       base:
