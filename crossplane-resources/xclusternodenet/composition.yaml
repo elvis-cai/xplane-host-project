@@ -230,6 +230,8 @@ spec:
           - type: string
             string:
               fmt: "%s-gkecluster"
+              type: Format
+        type: FromCompositeFieldPath
       - type: FromCompositeFieldPath
         fromFieldPath: spec.writeConnectionSecretToRef.namespace
         toFieldPath: spec.identity.secretRef.namespace
@@ -240,6 +242,7 @@ spec:
           - type: string
             string:
               fmt: "%s-sakey"
+              type: Format
       readinessChecks:
         - type: None
     - name: helm-release
