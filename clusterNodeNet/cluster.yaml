@@ -12,10 +12,10 @@ spec:
       channel: demo
       purpose: hackathon
       provider: gcp
-  id: awx-hack-uyq25
+  id: awx-hack-uyq26
   parameters:
-    cluster: hackathon-uyq25
-    network: hackathon-net-uyq25
-    subnetwork: hackathon-subnet-uyq25
+    cluster: hackathon-uyq26
+    network: hackathon-net-uyq26
+    subnetwork: hackathon-subnet-uyq26
   writeConnectionSecretToRef:
     name: hackaton-cluster-conn
