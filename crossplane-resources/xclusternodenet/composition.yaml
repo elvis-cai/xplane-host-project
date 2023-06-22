@@ -57,6 +57,7 @@ spec:
           - type: string
             string:
               fmt: "%s-sakey"
+              type: Format
       - type: FromCompositeFieldPath
         fromFieldPath: spec.writeConnectionSecretToRef.namespace
         toFieldPath: spec.writeConnectionSecretToRef.namespace
@@ -82,6 +83,7 @@ spec:
           - type: string
             string:
               fmt: "serviceAccount:%s"
+              type: Format
         policy:
           fromFieldPath: Required
       - type: FromCompositeFieldPath
@@ -159,8 +161,11 @@ spec:
           - type: string
             string:
               fmt: "%s-gkecluster"
+              type: Format
+        type: FromCompositeFieldPath
       - fromFieldPath: spec.writeConnectionSecretToRef.namespace
         toFieldPath: spec.writeConnectionSecretToRef.namespace
+        type: FromCompositeFieldPath
       - type: FromCompositeFieldPath
         fromFieldPath: metadata.labels
         toFieldPath: spec.forProvider.networkSelector.matchLabels
