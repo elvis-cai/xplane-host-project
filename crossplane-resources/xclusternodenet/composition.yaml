@@ -222,8 +222,10 @@ spec:
       patches:
       - fromFieldPath: spec.id
         toFieldPath: metadata.name
+        type: FromCompositeFieldPath
       - fromFieldPath: spec.writeConnectionSecretToRef.namespace
         toFieldPath: spec.credentials.secretRef.namespace
+        type: FromCompositeFieldPath
       - fromFieldPath: metadata.uid
         toFieldPath: spec.credentials.secretRef.name
         transforms:
