@@ -66,6 +66,9 @@ spec:
       - type: FromCompositeFieldPath
         fromFieldPath: spec.id
         toFieldPath: spec.forProvider.serviceAccountIdSelector.matchLabels[id]
+      - type: FromCompositeFieldPath
+        fromFieldPath: spec.id
+        toFieldPath: metadata.name
       
     - name: project-iam-member
       base:
