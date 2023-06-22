@@ -421,7 +421,7 @@ spec:
                   directory:
                     recurse: true
                     include: '*.yaml'
-                  repoURL: https://github.com/elvis-cai/xplane-hub-project.git
+                  repoURL: https://github.com/elvis-cai/xplane-tenant-project.git
                   targetRevision: HEAD
                   path: virtualargocds
                 syncPolicy:
