@@ -48,7 +48,7 @@ spec:
       base:
         apiVersion: cloudplatform.gcp.upbound.io/v1beta1
         kind: ServiceAccountKey
-        spec:
+        
       patches:
       - type: FromCompositeFieldPath
         fromFieldPath: metadata.uid
